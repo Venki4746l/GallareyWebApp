@@ -1,5 +1,5 @@
 import React from "react";
-import PhotosGallaery from "./Excerise1/Componets/PhotoGallary/PhotosGallaery";
+import PhotosGallaery from "./Componets/PhotoGallary/PhotosGallaery";
 
 const App = () => {
   return (
