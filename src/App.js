@@ -1,16 +1,12 @@
-
-import React from 'react'
-import PhotosGallaery from './Excerise1/Componets/PhotoGallary/PhotosGallaery'
-//import ResponsiveExample from './Excerise1/Componets/PhotoGallary/testing'
+import React from "react";
+import PhotosGallaery from "./Excerise1/Componets/PhotoGallary/PhotosGallaery";
 
 const App = () => {
   return (
     <div>
-  <PhotosGallaery />
-  {/* <ResponsiveExample /> */}
-
+      <PhotosGallaery />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
