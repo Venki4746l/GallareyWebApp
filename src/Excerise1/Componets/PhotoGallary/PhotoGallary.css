@@ -1,0 +1,27 @@
+.heading{
+  color: rgb(32, 155, 231);
+
+
+}
+.photo {
+  height: 300px;
+  width: 280px;
+  background-size: cover;
+  border-radius: 12px;
+}
+.photoscontainer{
+  padding: 10px;
+  
+}
+.imageConatiner{
+  margin: 5px;
+  
+}
+@media screen and (max-width: 768px) {
+  .photo {
+    height: 120px;
+    width: 120px;
+    background-size:cover ;
+    border-radius: 12px;
+  }
+}
