@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 768px) {
   .detailedimage{
-    width: 50%;
+    width: 60%;
     height: 40%;
     background-size: cover;
     border-radius: 27px;
