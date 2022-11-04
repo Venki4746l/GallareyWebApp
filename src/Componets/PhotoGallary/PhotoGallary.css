@@ -25,3 +25,45 @@
     border-radius: 12px;
   }
 }
+
+
+.detailedimage{
+  width: 600px;
+  height: 600px;
+  background-size: cover;
+  border-radius: 27px;
+}
+.mainheading{
+  color: rgb(12, 12, 12);
+  font-size: 34px;
+  font-weight: 800;
+  padding: 20px;
+}
+.mainBackgruond{
+  background-color: rgb(215, 226, 226);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  
+}
+.backButton{
+  padding-left: 10px;
+  margin: 20px;
+  background-color: rgb(95, 46, 231);
+  border: none;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .detailedimage{
+    width: 50%;
+    height: 40%;
+    background-size: cover;
+    border-radius: 27px;
+  }
+  
+}

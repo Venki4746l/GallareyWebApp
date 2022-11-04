@@ -9,6 +9,9 @@ const detailsLink =
 const PhotosGallaery = () => {
   const [details, setDetails] = useState([]);
 
+  const [imageClick, setImageClick] = useState(false);
+  const [filterData, setFilterData] = useState([]);
+
   const handleFetchData = async () => {
     const response = await fetch(detailsLink);
     const data = await response.json();
@@ -20,23 +23,59 @@ const PhotosGallaery = () => {
     handleFetchData();
   }, []);
 
+  const onMainShowdisplay = (e) => {
+    const filteredData = details.filter((info) => {
+      return info.id === e.target.id;
+    });
+    setFilterData(filteredData);
+    setImageClick(true);
+  };
+
+  const backToimages=()=>{
+    setImageClick(false)
+  }
+
   return (
-    <Container>
-      <h1 className="heading">Photo PhotosGallaery</h1>
-      <Row className="photoscontainer">
-        {details.map((info) => {
-          return (
-            <Col className="imageConatiner"  key={info.id}>
-              <img className="photo"
-                src={`https://farm${info.farm}.staticflickr.com/${info.server}/${info.id}_${info.secret}.jpg`}
-                alt="imagesLogo"
-              />
-              <p>{info.title}</p>
-            </Col>
-          );
-        })}
-      </Row>
-    </Container>
+    <div>
+      {imageClick ? (
+        <div >
+          {filterData.map((info) => {
+            return (
+              <center className="mainBackgruond">
+                <h1 className="mainheading">{info.title}</h1>
+                <img
+                  className="detailedimage"
+                  src={`https://farm${info.farm}.staticflickr.com/${info.server}/${info.id}_${info.secret}.jpg`}
+                  alt="imagesLogo"
+                />
+                <button onClick={backToimages} className="backButton">Back</button>
+              </center>
+            );
+          })}
+          
+        </div>
+      ) : (
+        <Container>
+          <h1 className="heading"> PhotosGallaery</h1>
+          <Row className="photoscontainer">
+            {details.map((info) => {
+              return (
+                <Col className="imageConatiner" key={info.id}>
+                  <img
+                    id={info.id}
+                    className="photo"
+                    onClick={onMainShowdisplay}
+                    src={`https://farm${info.farm}.staticflickr.com/${info.server}/${info.id}_${info.secret}.jpg`}
+                    alt="imagesLogo"
+                  />
+                  <p>{info.title}</p>
+                </Col>
+              );
+            })}
+          </Row>
+        </Container>
+      )}
+    </div>
   );
 };
 
