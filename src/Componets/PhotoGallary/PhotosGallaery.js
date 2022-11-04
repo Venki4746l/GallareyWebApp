@@ -31,28 +31,30 @@ const PhotosGallaery = () => {
     setImageClick(true);
   };
 
-  const backToimages=()=>{
-    setImageClick(false)
-  }
+  const backToimages = () => {
+    setImageClick(false);
+  };
 
   return (
     <div>
       {imageClick ? (
-        <div >
+        <div>
           {filterData.map((info) => {
             return (
-              <center className="mainBackgruond">
+              <center key={info.id} className="mainBackgruond">
                 <h1 className="mainheading">{info.title}</h1>
                 <img
+
                   className="detailedimage"
                   src={`https://farm${info.farm}.staticflickr.com/${info.server}/${info.id}_${info.secret}.jpg`}
                   alt="imagesLogo"
                 />
-                <button onClick={backToimages} className="backButton">Back</button>
+                <button onClick={backToimages} className="backButton">
+                  Back
+                </button>
               </center>
             );
           })}
-          
         </div>
       ) : (
         <Container>
