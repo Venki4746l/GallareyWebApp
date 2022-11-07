@@ -70,7 +70,7 @@ const PhotosGallaery = () => {
                     src={`https://farm${info.farm}.staticflickr.com/${info.server}/${info.id}_${info.secret}.jpg`}
                     alt="imagesLogo"
                   />
-                  <p>{info.title}</p>
+                  <h5>{info.title}</h5>
                 </Col>
               );
             })}
