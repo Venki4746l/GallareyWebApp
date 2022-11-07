@@ -27,18 +27,8 @@
 }
 
 
-.detailedimage{
-  width: 600px;
-  height: 600px;
-  background-size: cover;
-  border-radius: 27px;
-}
-.mainheading{
-  color: rgb(12, 12, 12);
-  font-size: 34px;
-  font-weight: 800;
-  padding: 20px;
-}
+
+
 .mainBackgruond{
   background-color: rgb(215, 226, 226);
   display: flex;
@@ -47,6 +37,19 @@
   height: 100vh;
   box-sizing: border-box;
   
+  
+}
+.detailedimage{
+  width: 50vw;
+  height: 60vh;
+  background-size: cover;
+  border-radius: 27px;
+}
+.mainheading{
+  color: rgb(12, 12, 12);
+  font-size: 34px;
+  font-weight: 800;
+  padding: 20px;
 }
 .backButton{
   padding-left: 10px;
@@ -60,8 +63,8 @@
 
 @media screen and (max-width: 768px) {
   .detailedimage{
-    width: 60%;
-    height: 40%;
+    width: 50vw;
+    height: 30vh;
     background-size: cover;
     border-radius: 27px;
   }

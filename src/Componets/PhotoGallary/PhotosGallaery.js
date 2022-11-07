@@ -41,7 +41,7 @@ const PhotosGallaery = () => {
         <div>
           {filterData.map((info) => {
             return (
-              <center key={info.id} className="mainBackgruond">
+              <div key={info.id} className="mainBackgruond">
                 <h1 className="mainheading">{info.title}</h1>
                 <img
 
@@ -52,7 +52,7 @@ const PhotosGallaery = () => {
                 <button onClick={backToimages} className="backButton">
                   Back
                 </button>
-              </center>
+              </div>
             );
           })}
         </div>
