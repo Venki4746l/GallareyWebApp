@@ -1,11 +1,11 @@
 import React from "react";
-import PhotosGallaery from "./Componets/PhotoGallary/PhotosGallaery";
+import PhotosGallaery from "./Pages/Componets/PhotoGallary/PhotosGallaery";
 
 const App = () => {
   return (
-    <div>
+    <>
       <PhotosGallaery />
-    </div>
+    </>
   );
 };
 
