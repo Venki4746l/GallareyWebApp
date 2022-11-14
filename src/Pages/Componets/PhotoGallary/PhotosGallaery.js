@@ -9,11 +9,11 @@ const detailsLink =
   "https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=f9736f4d370f9c7115a952951b506569&gallery_id=66911286-72157647277042064&format=json&nojsoncallback=1";
 
 const PhotosGallaery = () => {
-  const details = useFetch(detailsLink);
-
+  const details = useFetch(detailsLink);//fetch the details
   const [imageClick, setImageClick] = useState(false);
   const [filterData, setFilterData] = useState([]);
 
+  //getting the slected image detials and set the detials to variable
   const onMainShowdisplay = (e) => {
     const filteredData = details.filter((info) => {
       return info.id === e.target.id;
@@ -26,11 +26,11 @@ const PhotosGallaery = () => {
 
   return (
     <div>
-      <center>
+      
       {imageClick && (
         <DetailedPage onHide={()=>setImageClick(false)} show={imageClick} singlepageinfo={filterData}  />
       )}
-      </center>
+      
 
       <Container>
         <h1 className="heading"> Flicker Photo Gallaery</h1>

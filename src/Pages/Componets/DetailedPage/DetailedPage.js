@@ -1,34 +1,3 @@
-// import React from 'react'
-// import './DetailedPage.css'
-
-// const DetailedPage = (props) => {
-//     const backToimages=()=>{
-//         props.BackToMain(false)
-//     }
-//   return (
-//       <div className="animation">
-//           {props.SinglePageInfo.map((info) => {
-//             return (
-//               <div key={info.id} className="mainBackgruond">
-//                 <h1 className="mainheading">{info.title}</h1>
-//                 <img
-//                   className="detailedimage"
-//                   src={`https://farm${info.farm}.staticflickr.com/${info.server}/${info.id}_${info.secret}.jpg`}
-//                   alt="imagesLogo"
-//                 />
-//                 <button onClick={backToimages} className="backButton">
-//                   Back
-//                 </button>
-//               </div>
-//             );
-//           })}
-//         </div>
-
-//   )
-// }
-
-// export default DetailedPage
-
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
