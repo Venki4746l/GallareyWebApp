@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
 import useFetch from "./../useFetch/useFetch";
 import DetailedPage from "../DetailedPage/DetailedPage";
+import { headings} from "../../Constants/Headings";
+
 
 const detailsLink =
   "https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=f9736f4d370f9c7115a952951b506569&gallery_id=66911286-72157647277042064&format=json&nojsoncallback=1";
@@ -25,16 +27,16 @@ const PhotosGallaery = () => {
   
 
   return (
-    <div>
+    <>
       
       {imageClick && (
         <DetailedPage onHide={()=>setImageClick(false)} show={imageClick} singlepageinfo={filterData}  />
       )}
       
 
-      <Container>
-        <h1 className="heading"> Flicker Photo Gallaery</h1>
-        <Row className="photoscontainer">
+      <Container >
+        <h1 className="heading">{headings.GallaeryHeading}</h1>
+        <Row >
           {details.map((info) => {
             return (
               <Col className="imageConatiner" key={info.id}>
@@ -50,7 +52,7 @@ const PhotosGallaery = () => {
           })}
         </Row>
       </Container>
-    </div>
+    </>
   );
 };
 

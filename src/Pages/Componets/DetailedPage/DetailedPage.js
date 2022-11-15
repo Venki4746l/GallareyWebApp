@@ -2,6 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./DetailedPage.css";
+import { headings } from "../../Constants/Headings";
 
 const DetailedPage = (props) => {
   const { title, id, farm, server, secret } = props.singlepageinfo[0];
@@ -14,7 +15,7 @@ const DetailedPage = (props) => {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title>Select Image Details</Modal.Title>
+        <Modal.Title>{headings.SelectImages}</Modal.Title>
       </Modal.Header>
 
       <Modal.Body className="container-image">

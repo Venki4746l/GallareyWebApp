@@ -1,6 +1,7 @@
-const Headings = () => {
-  const titleHeadings = { GallaeryHeading: "flicker Gallery app" };
-  return titleHeadings;
-};
 
-export default Headings;
+export  const headings= {
+  GallaeryHeading: "flicker Gallery app",
+  SelectImages:"Select Image Details",
+  
+};
+ 
